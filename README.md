@@ -5,8 +5,10 @@ Youtube Downloader django app
 Website developer : www.ironsistem.com
 Pafy (python youtube lib) : http://np1.github.io/pafy/
 
-//////////////////////////////////////
+
 Instrucciones de instalacion:
+==============================
+
     1.- Agregar al settings.py la aplicacion 'apps.airotub'
     2.- Agrega los archivos estaticos y de template al proyecto donde seas instalar la app
     3.- Tener configurada la variable STATIC_URL
