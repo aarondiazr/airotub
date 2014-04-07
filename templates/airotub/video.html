@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}airotub/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="{{STATIC_URL}}airotub/css/customs.css">
+	<title>Descargar video</title>
+</head>
+<body>
+	<div class='container'>
+		<div id="youtube" class="row">
+			{%if vale == 1 %}
+				<div class="col-lg-2"></div>
+				<div class="col-lg-2">
+					<img src="{{thumbnail}}" class="img-thumbnail pull-left" alt="Responsive image">
+				</div>
+				<div class="col-lg-8">
+					<div class="row">
+						<div class="col-lg-10">
+							<h4 class="pull-left">{{titulo}}</h4>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-lg-12">
+							<a href="{{videodown}}" download="{{titulo}}.mp4" class="btn btn-primary" role="button"><span class="glyphicon glyphicon-save"></span> Video: MP4</a>
+							<a href="{{audiodown}}" download="{{titulo}}.ogg" class="btn btn-success" role="button"><span class="glyphicon glyphicon-save"></span> Audio:OGG</a>
+						</div>
+					</div>
+				</div>
+			{% else %}
+				<div class="col-lg-4"></div>
+				<div class="col-lg-4">
+					<div class="row">
+						<div class="col-lg-12">
+							<div class="alert alert-dismissable alert-danger">
+							  <button type="button" class="close" data-dismiss="alert">×</button>
+							  <strong>Ha ocurrido un error,</strong> posiblemente el link del video esta mal!.
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-4"></div>
+			{% endif %}
+		</div>
+</body>
+</html>
